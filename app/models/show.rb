@@ -1,6 +1,7 @@
 class Show < ActiveRecord::Base
   has_many :characters
   has_many :actors, through: :characters
+  belongs_to :networks
 
   def build_network(call_letters: value)
     # to do this, the show model has to define its relationship with network
