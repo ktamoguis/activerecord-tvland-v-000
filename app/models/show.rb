@@ -10,6 +10,7 @@ class Show < ActiveRecord::Base
     binding.pry
     new_network = Network.create(call_letters: call_letters)
     self.network_id = new_network.id
+    self.save
     #network = Network.create(call_letters:)
   end
 
