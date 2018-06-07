@@ -8,6 +8,7 @@ class Show < ActiveRecord::Base
     #expect(show.network.call_letters).to eq("NBC")
     #call = value
     binding.pry
+    new_network = Network.create(call_letters: call_letters)
     #network = Network.create(call_letters:)
   end
 
