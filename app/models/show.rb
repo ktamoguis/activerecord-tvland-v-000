@@ -9,6 +9,7 @@ class Show < ActiveRecord::Base
     #call = value
     binding.pry
     new_network = Network.create(call_letters: call_letters)
+    self.network_id = new_network.id
     #network = Network.create(call_letters:)
   end
 
